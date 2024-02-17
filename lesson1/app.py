@@ -118,12 +118,16 @@ def base_template():
 
 @app.route('/about_us/')
 def about_us():
-    return render_template(template_name_or_list='about_us.html')
+    return render_template(template_name_or_list='about_us.html',
+                           text=lorem.get_sentence(
+                               count=10, word_range=(15, 20)))
 
 
 @app.route('/contacts/')
 def contacts():
-    return render_template(template_name_or_list='contacts.html')
+    return render_template(template_name_or_list='contacts.html',
+                           text=lorem.get_sentence(
+                               count=10, word_range=(15, 20)))
 
 
 @app.route('/clothes/')
