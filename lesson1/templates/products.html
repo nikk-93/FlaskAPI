@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block Title %}Товары{% endblock %}
+
+{% block Content %}
+
+<div class="row row-cols-4 row-cols-md-4 g-4">
+    {% for product in products %}
+    <div class="card">
+        <img src="{{ product.src_img }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <a href="#" class="btn btn-primary">Купить {{ product.price }}р.</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
