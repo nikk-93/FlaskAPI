@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock title %}
+
+{% block content %}
+<div>
+    <button "btn btn-secondary"><a href="{{ url_for('sign_up') }}">Регистрация</a></button>
+</div>
+<div>
+    <button "btn btn-secondary"><a href="{{ url_for('sign_in') }}">Вход</a></button>
+</div>
+{% endblock content %}
